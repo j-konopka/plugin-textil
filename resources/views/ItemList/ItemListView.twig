@@ -1,12 +1,12 @@
-{% extends "PluginCeres::PageDesign.PageDesign" %}
+{% extends "TextilLayout::PageDesign.PageDesign" %}
 
 {% block PageBody %}
 
-    {{ component( "PluginCeres::ItemList.Components.ItemList" ) }}
-    {{ component( "PluginCeres::ItemList.Components.ItemsPerPage" ) }}
-    {{ component( "PluginCeres::ItemList.Components.ItemListSorting" ) }}
-    {{ component( "PluginCeres::ItemList.Components.Pagination" ) }}
-    {{ component( "PluginCeres::ItemList.Components.LoadingAnimation" ) }}
+    {{ component( "TextilLayout::ItemList.Components.ItemList" ) }}
+    {{ component( "TextilLayout::ItemList.Components.ItemsPerPage" ) }}
+    {{ component( "TextilLayout::ItemList.Components.ItemListSorting" ) }}
+    {{ component( "TextilLayout::ItemList.Components.Pagination" ) }}
+    {{ component( "TextilLayout::ItemList.Components.LoadingAnimation" ) }}
 
     <resource name="itemList" :data="{}"></resource>
 
@@ -15,8 +15,8 @@
             <div class="col-xs-12 col-lg-7">
             </div>
             <div class="col-xs-12 col-lg-5">
-                <item-list-sorting :sort-data="{{ config("PluginCeres.sort.data") | split(', ') | json_encode() }}"></item-list-sorting>
-                <items-per-page :pagination-values="{{ config("PluginCeres.pagination.values") | split(', ') | json_encode() }}"></items-per-page>
+                <item-list-sorting :sort-data="{{ config("TextilLayout.sort.data") | split(', ') | json_encode() }}"></item-list-sorting>
+                <items-per-page :pagination-values="{{ config("TextilLayout.pagination.values") | split(', ') | json_encode() }}"></items-per-page>
                 <pagination></pagination>
             </div>
 

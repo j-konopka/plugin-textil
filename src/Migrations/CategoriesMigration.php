@@ -1,6 +1,6 @@
 <?php //strict
 
-namespace Ceres\Migrations;
+namespace Textil\Migrations;
 
 use Plenty\Modules\Category\Contracts\CategoryRepositoryContract;
 //use Plenty\Modules\Category\Contracts\CategoryTemplateRepositoryContract;
@@ -65,7 +65,7 @@ class CategoriesMigration
     }
     
     /**
-     * Create all standard categories needed for ceres
+     * Create all standard categories needed for textil
      */
     public function run()
     {
@@ -115,7 +115,7 @@ class CategoriesMigration
     }
     
     /**
-     * Create the ceres parent category
+     * Create the textil parent category
      * @return int
      */
     private function createParentCategory()
@@ -124,12 +124,12 @@ class CategoriesMigration
             [
                 'plentyId' => 0,
                 'lang' => 'de',
-                'name' => 'ceres'
+                'name' => 'textil'
             ],
             [
                 'plentyId' => 0,
                 'lang' => 'en',
-                'name' => 'ceres'
+                'name' => 'textil'
             ]
         ];
         

@@ -1,20 +1,20 @@
-{% import "PluginCeres::PageDesign.Macros.IncludeComponents" as Loader %}
-{{ component( "PluginCeres::PageDesign.Components.Notifications" ) }}
-{{ component( "PluginCeres::Basket.Components.BasketPreview" ) }}
-{{ component( "PluginCeres::Customer.Components.Login" ) }}
-{{ component( "PluginCeres::Customer.Components.Registration" ) }}
-{{ component( "PluginCeres::Basket.Components.AddItemToBasketOverlay" ) }}
+{% import "TextilLayout::PageDesign.Macros.IncludeComponents" as Loader %}
+{{ component( "TextilLayout::PageDesign.Components.Notifications" ) }}
+{{ component( "TextilLayout::Basket.Components.BasketPreview" ) }}
+{{ component( "TextilLayout::Customer.Components.Login" ) }}
+{{ component( "TextilLayout::Customer.Components.Registration" ) }}
+{{ component( "TextilLayout::Basket.Components.AddItemToBasketOverlay" ) }}
 
 <!DOCTYPE html>
 
 {% set lang = services.sessionStorage.getLang() %}
-{% set fixNavBarPos = config("PluginCeres.header.fixed_navbar") %}
-{% set showItemConfirm = config("PluginCeres.basket.add_item_to_basket_confirm") %}
+{% set fixNavBarPos = config("TextilLayout.header.fixed_navbar") %}
+{% set showItemConfirm = config("TextilLayout.basket.add_item_to_basket_confirm") %}
 
 <html lang="{{ lang }}" data-framework="vue">
 
     <head>
-        {% include "PluginCeres::PageDesign.Partials.Head" %}
+        {% include "TextilLayout::PageDesign.Partials.Head" %}
     </head>
 
     <body>
@@ -38,7 +38,7 @@
 
         <div class="wrapper wrapper-main {% if fixNavBarPos == 'true' %}isSticky{% endif %}">
 
-            {% include "PluginCeres::PageDesign.Partials.Header.Header" %}
+            {% include "TextilLayout::PageDesign.Partials.Header.Header" %}
 
             <div id="page-body" class="main">
                 {% block PageBody %}
@@ -46,7 +46,7 @@
                 {% endblock %}
             </div>
 
-            {% include "PluginCeres::PageDesign.Partials.Footer" %}
+            {% include "TextilLayout::PageDesign.Partials.Footer" %}
         </div>
 
         <div class="wrapper wrapper-right">
@@ -63,7 +63,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h3 class="modal-title">{{ trans("PluginCeres::Template.accLogin") }}</h3>
+                                <h3 class="modal-title">{{ trans("TextilLayout::Template.accLogin") }}</h3>
                             </div>
                             <div class="modal-body">
                                 <login modal-element="login-modal-wrapper"></login>
@@ -81,7 +81,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h3 class="modal-title">{{ trans("PluginCeres::Template.accCreateAccount") }}</h3>
+                                <h3 class="modal-title">{{ trans("TextilLayout::Template.accCreateAccount") }}</h3>
                             </div>
                             <div class="modal-body">
                                 <registration :is-simple-registration="true" modal-element="simple-registration-modal-wrapper"></registration>
@@ -102,18 +102,18 @@
 
         {% set lang = services.sessionStorage.getLang() %}
 
-        {% if config("PluginCeres.log.performance.level") == 'development' %}
-            <script src="{{ plugin_path('PluginCeres') }}/js/lang/{{ lang }}.js"></script>
+        {% if config("TextilLayout.log.performance.level") == 'development' %}
+            <script src="{{ plugin_path('TextilLayout') }}/js/lang/{{ lang }}.js"></script>
             <script>var Translations = Languages['{{ lang }}'];</script>
-            <script src="{{ plugin_path('PluginCeres') }}/js/dist/plugin-ceres-vendor.js"></script>
-            <script src="{{ plugin_path('PluginCeres') }}/js/src/app.config.js"></script>
-            <script src="{{ plugin_path('PluginCeres') }}/js/dist/plugin-ceres-app.js"></script>
+            <script src="{{ plugin_path('TextilLayout') }}/js/dist/plugin-textil-vendor.js"></script>
+            <script src="{{ plugin_path('TextilLayout') }}/js/src/app.config.js"></script>
+            <script src="{{ plugin_path('TextilLayout') }}/js/dist/plugin-textil-app.js"></script>
         {% else %}
             {# TODO remove douplicate import #}
-            <script src="{{ plugin_path('PluginCeres') }}/js/lang/{{ lang }}.js"></script>
+            <script src="{{ plugin_path('TextilLayout') }}/js/lang/{{ lang }}.js"></script>
             <script>var Translations = Languages['{{ lang }}'];</script>
 
-            <script src="{{ plugin_path('PluginCeres') }}/js/dist/plugin-ceres.min.js"></script>
+            <script src="{{ plugin_path('TextilLayout') }}/js/dist/plugin-textil.min.js"></script>
         {% endif %}
     </body>
 </html>

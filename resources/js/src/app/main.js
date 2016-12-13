@@ -7,7 +7,7 @@ vueApp = new Vue({
 (function($, window, document)
 {
 
-    function CallistoMain()
+    function TextilMain()
     {
 
         $(window).scroll(function()
@@ -112,6 +112,6 @@ vueApp = new Vue({
         });
     }
 
-    window.CallistoMain = new CallistoMain();
+    window.TextilMain = new TextilMain();
 
 })(jQuery, window, document);

@@ -1,8 +1,8 @@
-{{ component( "PluginCeres::Basket.Components.AddItemToBasket" ) }}
+{{ component( "TextilLayout::Basket.Components.AddItemToBasket" ) }}
 
 {% set image = item.variationImageList | first %}
-{% set configItemName = config("PluginCeres.item.name") %}
-{% set itemData = config("PluginCeres.item.data")|split(', ') %}
+{% set configItemName = config("TextilLayout.item.name") %}
+{% set itemData = config("TextilLayout.item.data")|split(', ') %}
 
 <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
     <div class="thumb-inner">
@@ -14,19 +14,19 @@
             </div>
             <ul>
                 <li class="img-contain-container square-container">
-                    <img class="img-fluid" data-original="{{ plugin_path('PluginCeres') }}/images/100x100.png">
+                    <img class="img-fluid" data-original="{{ plugin_path('TextilLayout') }}/images/100x100.png">
                 </li>
                 <li class="img-contain-container square-container">
-                    <img class="img-fluid" data-original="{{ plugin_path('PluginCeres') }}/images/100x100.png">
+                    <img class="img-fluid" data-original="{{ plugin_path('TextilLayout') }}/images/100x100.png">
                 </li>
                 <li class="img-contain-container square-container">
-                    <img class="img-fluid" data-original="{{ plugin_path('PluginCeres') }}/images/100x100.png">
+                    <img class="img-fluid" data-original="{{ plugin_path('TextilLayout') }}/images/100x100.png">
                 </li>
                 <li class="img-contain-container square-container">
-                    <img class="img-fluid" data-original="{{ plugin_path('PluginCeres') }}/images/100x100.png">
+                    <img class="img-fluid" data-original="{{ plugin_path('TextilLayout') }}/images/100x100.png">
                 </li>
                 <li class="img-contain-container square-container">
-                    <img class="img-fluid" data-original="{{ plugin_path('PluginCeres') }}/images/100x100.png">
+                    <img class="img-fluid" data-original="{{ plugin_path('TextilLayout') }}/images/100x100.png">
                 </li>
             </ul>
             <div class="thumb-scroll-cmd scroll-down">
@@ -62,7 +62,7 @@
                     {% set percent = 100-(item.variationRecommendedRetailPrice.retailPrice/item.variationRetailPrice.unitPrice*100) %}
 
                     {% if percent <= 0 %}
-                        {% set dezimalcount = config('PluginCeres.item.storeSpecial') %}
+                        {% set dezimalcount = config('TextilLayout.item.storeSpecial') %}
                         {% set percent = percent | number_format(dezimalcount, ',', '.') %}
                         {% set storeSpecial = percent ~"%" %}
                     {% else %}

@@ -1,0 +1,75 @@
+@import "variables";
+// ==========================================================================
+// External Libs
+// ==========================================================================
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/shariff/build/shariff.complete.css";
+@import "../../node_modules/flag-icon-css/sass/flag-icon";
+@import "../../node_modules/owlcarousel/owl-carousel/owl.carousel.css";
+
+// ==========================================================================
+// Custom styles
+// ==========================================================================
+
+// global
+@import "textil/mixins/general-mixins";
+@import "textil/mixins/proportional-boxes";
+@import "textil/common/typography";
+@import "textil/common/common";
+@import "textil/common/structure";
+
+// custom shariff theme for the social icons in the header
+@import "textil/common/shariff-theme-minimal";
+
+//TODO's
+@import "textil/common/buttons";
+@import "textil/common/card";
+
+// External plugins overrides
+@import "textil/plugins/lightbox";
+@import "textil/plugins/owl-carousel";
+
+// Components
+@import "textil/components/component-base";
+@import "textil/components/accordion";
+@import "textil/components/alerts";
+@import "textil/components/featured-category";
+@import "textil/components/featured-sale";
+
+// Forms
+@import "textil/forms/input-groups";
+@import "textil/forms/inputs";
+@import "textil/forms/select";
+
+// Page Design / Global components
+@import "textil/views/PageDesign/header";
+@import "textil/views/PageDesign/search-box";
+@import "textil/views/PageDesign/language-select";
+@import "textil/views/PageDesign/navigation";
+@import "textil/views/PageDesign/breadcrumb";
+@import "textil/views/PageDesign/footer";
+
+// Templates
+@import "textil/views/Confirmation/confirmation-order-item";
+@import "textil/views/Templates/AddressSelect/address-select";
+@import "textil/views/Templates/BasketItemList/basket-item";
+@import "textil/views/Templates/BasketPreview/basket-preview-item";
+@import "textil/views/Templates/BasketPreview/basket-preview";
+@import "textil/views/Templates/BasketTotalSum/basket-total-sum";
+@import "textil/views/Templates/CategoryListItem/category-list-item";
+@import "textil/views/Templates/CategoryViewFilter/category-view-filter";
+@import "textil/views/Templates/Hero/component-hero";
+@import "textil/views/Templates/ItemListSort/pagination";
+@import "textil/views/Templates/ItemRating/item-rating-roll";
+@import "textil/views/Templates/ItemRating/item-rating-section";
+@import "textil/views/Templates/OrderItem/order-item";
+@import "textil/views/Templates/PaymentShippingSelect/payment-shipping-select";
+@import "textil/views/Templates/ToggleCategoryListView/toggle-list-view";
+
+// Pages
+@import "textil/views/Home/home";
+@import "textil/views/Checkout/checkout";
+@import "textil/views/Item/single-item";
+@import "textil/views/ItemList/loading-animation";
+@import "textil/views/Category/category-list";
