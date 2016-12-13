@@ -1,17 +1,17 @@
 {
     "version"           : "0.1.0",
-    "name"              : "PluginCeres",
-    "description"       : "plentymarkets webshop layout",
-    "author"            : "plentymarkets GmbH",
-    "keywords"          : ["plentymarkets", "plugins", "layout", "template", "ceres"],
+    "name"              : "TextilLayout",
+    "description"       : "textil webshop layout",
+    "author"            : "Jens Konopka",
+    "keywords"          : ["plentymarkets", "plugins", "layout", "template", "textil"],
     "type"              : "template",
     "require"           : [],
-    "namespace"         : "Ceres",
-    "serviceProvider"   : "Ceres\\Providers\\TemplateServiceProvider",
+    "namespace"         : "Textil",
+    "serviceProvider"   : "Textil\\Providers\\TemplateServiceProvider",
     "javaScriptFiles"   : [],
     "runOnBuild"        :
     [
-      "Ceres\\Migrations\\CategoriesMigration"
+      "Textil\\Migrations\\CategoriesMigration"
     ],
     "containers"        :
     [
